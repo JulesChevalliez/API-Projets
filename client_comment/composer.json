@@ -1,0 +1,17 @@
+{
+    "name": "jules/comment-client",
+    "authors": [
+        {
+            "name": "Jules Chevalliez",
+            "email": "juleschevalliez@live.fr"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Comment\\Client\\": "src"
+        }
+    }
+}

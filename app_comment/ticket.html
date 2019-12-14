@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tout les commentaires</title>
+    <script src="https://use.fontawesome.com/726bd4ab21.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="../client_comment/public/CommentClient.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Le Crazy Skieur </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container col-8" style="margin-top: 75px">
+    <h1>Lorem Ipsum</h1>
+    <p>Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum
+        theatralium latent, quae Campanam imitatus lasciviam Catulus in aedilitate sua suspendit omnium primus; aut
+        pugnaciter aleis certant turpi sono fragosis naribus introrsum reducto spiritu concrepantes; aut quod est
+        studiorum omnium maximum ab ortu lucis ad vesperam sole fatiscunt vel pluviis, per minutias aurigarum equorumque
+        praecipua vel delicta scrutantes.</p>
+    <h2>Lorem Ispsum Doleres de tabernis et</h2>
+    <div class="text-center" style="margin-top: 50px">
+        <img src="img/station-ski-proche-annecy-732x380.jpg">
+    </div>
+    <br><br>
+    <p>Ac ne quis a nobis hoc ita dici forte miretur, quod alia quaedam in hoc facultas sit ingeni, neque haec dicendi
+        ratio aut disciplina, ne nos quidem huic uni studio penitus umquam dediti fuimus. Etenim omnes artes, quae ad
+        humanitatem pertinent, habent quoddam commune vinculum, et quasi cognatione quadam inter se continentur.
+
+        Dein Syria per speciosam interpatet diffusa planitiem. hanc nobilitat Antiochia, mundo cognita civitas, cui non
+        certaverit alia advecticiis ita adfluere copiis et internis, et Laodicia et Apamia itidemque Seleucia iam inde a
+        primis auspiciis florentissimae.</p>
+    <p>Ac ne quis a nobis hoc ita dici forte miretur, quod alia quaedam in hoc facultas sit ingeni, neque haec dicendi
+        ratio aut disciplina, ne nos quidem huic uni studio penitus umquam dediti fuimus. Etenim omnes artes, quae ad
+        humanitatem pertinent, habent quoddam commune vinculum, et quasi cognatione quadam inter se continentur.
+
+        Dein Syria per speciosam interpatet diffusa planitiem. hanc nobilitat Antiochia, mundo cognita civitas, cui non
+        certaverit alia advecticiis ita adfluere copiis et internis, et Laodicia et Apamia itidemque Seleucia iam inde a
+        primis auspiciis florentissimae.</p><br><br>
+    <h2>Commentaires</h2><br><br>
+</div>
+
+
+<div class="container p-4 col-lg-8">
+
+
+    <div class="container blockComment">
+        <div class="card">
+            <div class="card-header">
+                Jules
+                <ul class="nav nav-tabs card-header-tabs float-right">
+                    <button class="btn btn-primary fa fa-edit btnCard"></button>
+                    <button class="btn btn-warning fa fa-trash btnCard"></button>
+                </ul>
+                <!--<span class="float-right">Posté le 12/12/2019</span>-->
+            </div>
+            <div class="card-body">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text float-right">
+                    <small class="text-muted">12/12/2019 à 08:35</small>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-5" id="commentForm">
+        <div class="card">
+            <div class="card-body">
+                <form action="#" id="formComment">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom" id="nom" name="nom" class="form-control">
+                    </div>
+                    <div class="form-group">
+<textarea placeholder="Votre message" rows="7" cols="30" id="message" name="comment"
+          class="form-control"></textarea>
+                    </div>
+                    <button type="button" id="sendForm"
+                            class="btn btn-primary btn-block text-center">Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5" style="display: none" id="editForm">
+        <div class="card">
+            <div class="card-body">
+                <form action="#" id="forEdit">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom" id="name" name="name" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+<textarea placeholder="Votre message" rows="7" cols="30" id="msg" name="msg"
+          class="form-control"></textarea>
+                    </div>
+                    <button type="button" id="sendEdit"
+                            class="btn btn-warning btn-block text-center">Envoyer Edit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Comment API</p>
+    </div>
+</footer>
+
+<style>
+    .btnCard {
+        color: #060606;
+        background-color: #dadada;
+        border-color: #dadada;
+        margin: 5px;
+    }
+
+    .cardComment {
+        margin-bottom: 25px;
+    }
+</style>
+</body>
+
+</html>
